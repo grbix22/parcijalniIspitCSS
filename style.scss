@@ -1,0 +1,64 @@
+@import "./base/reset";
+@import "./base/colors";
+@import "./abstracts/mixins";
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+body {
+  background-image: url(./blur-clean.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+}
+div {
+  @include container-border();
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 200px;
+  text-align: center;
+}
+.cascading {
+  @include animation();
+  background-color: $bcolor-cascading;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+.style {
+  @include animation();
+  background-color: $bcolor-style;
+  animation-delay: 1.5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.sheets {
+  @include animation();
+  background-color: $bcolor-sheets;
+  animation-delay: 3s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+h1 {
+  font-size: 100px;
+  color: $color-text;
+  opacity: 1;
+}

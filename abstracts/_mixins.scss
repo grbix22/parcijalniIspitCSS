@@ -1,0 +1,6 @@
+@mixin container-border {
+  border: 3px solid white;
+}
+@mixin animation {
+  animation: slide-in-top 1.5s ease-in;
+}
